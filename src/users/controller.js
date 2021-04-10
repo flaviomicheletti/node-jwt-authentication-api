@@ -10,7 +10,8 @@ router.get('/', getAll);
 module.exports = router;
 
 function authenticate(req, res, next) {
-    userService.authenticate(req.body)
+    console.log(req);
+    userService.authenticate(req.body.username, req.body.password)
         .then(user => 
             user ? 
             res.json(user) :

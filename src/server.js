@@ -6,6 +6,7 @@ const jwt = require('./helpers/jwt');
 const errorHandler = require('./helpers/error-handler');
 
 app.use(cors());
+app.use(express.json());
 
 // use JWT auth to secure the api
 // comente para desligar
