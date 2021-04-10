@@ -2,10 +2,9 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const jwt = require('_helpers/jwt');
-const errorHandler = require('_helpers/error-handler');
+const jwt = require('./helpers/jwt');
+const errorHandler = require('./helpers/error-handler');
 
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 // use JWT auth to secure the api
