@@ -1,10 +1,11 @@
-﻿require('rootpath')();
-const express = require('express');
-const app = express();
+﻿const express = require('express');
 const cors = require('cors');
 const jwt = require('./helpers/jwt');
 const errorHandler = require('./helpers/error-handler');
+const routers = require('./helpers/routers')
 
+
+const app = express();
 app.use(cors());
 app.use(express.json());
 
@@ -12,11 +13,12 @@ app.use(express.json());
 // comente para desligar
 app.use(jwt());
 
-// api routes
-app.use('/users', require('./users/controller'));
-
 // global error handler
 app.use(errorHandler);
+
+// api routes
+app.use(routers());
+
 
 // start server
 const port = process.env.NODE_ENV === 'production' ? 80 : 3000;

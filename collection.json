@@ -39,11 +39,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}users/authenticate",
+					"raw": "{{baseUrl}}/users/authenticate",
 					"host": [
-						"{{baseUrl}}users"
+						"{{baseUrl}}"
 					],
 					"path": [
+						"users",
 						"authenticate"
 					]
 				}
@@ -51,7 +52,7 @@
 			"response": []
 		},
 		{
-			"name": "index",
+			"name": "users",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -66,9 +67,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}users",
+					"raw": "{{baseUrl}}/users",
 					"host": [
-						"{{baseUrl}}users"
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users"
 					]
 				}
 			},
@@ -76,6 +80,9 @@
 		},
 		{
 			"name": "foo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -87,7 +94,7 @@
 						}
 					]
 				},
-				"method": "POST",
+				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
@@ -106,11 +113,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}users/foo",
+					"raw": "{{baseUrl}}/users/foo",
 					"host": [
-						"{{baseUrl}}users"
+						"{{baseUrl}}"
 					],
 					"path": [
+						"users",
 						"foo"
 					]
 				}
@@ -140,12 +148,14 @@
 	],
 	"variable": [
 		{
-			"id": "3afb2eb9-ea27-4401-a6d5-e3dc5a042412",
 			"key": "baseUrl",
-			"value": "http://localhost:3000/"
+			"value": "http://localhost:3000"
 		},
 		{
-			"id": "512a2757-9aa3-443a-ad89-8972b184c78d",
+			"key": "token",
+			"value": ""
+		},
+		{
 			"key": "Token",
 			"value": ""
 		}
