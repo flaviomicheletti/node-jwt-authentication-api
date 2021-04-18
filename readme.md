@@ -1,5 +1,5 @@
-# node-jwt-authentication-api
+# Nodejs Express JWT
 
-NodeJS JWT Authentication API
+A simple example.
 
-For documentation and instructions check out http://jasonwatmore.com/post/2018/08/06/nodejs-jwt-authentication-tutorial-with-example-api
+Based on http://jasonwatmore.com/post/2018/08/06/nodejs-jwt-authentication-tutorial-with-example-api

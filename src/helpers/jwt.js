@@ -12,7 +12,7 @@ function jwt() {
     return expressJwt({ secret }).unless({
         path: [
             '/users/authenticate',
-            // '/users/foo'
+            '/users/unprotected'
         ]
     });
 }
