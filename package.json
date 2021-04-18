@@ -1,11 +1,11 @@
 {
-  "name": "node-jwt-authentication-api",
+  "name": "nodejs-jwt-express",
   "version": "1.0.0",
-  "description": "NodeJS JWT Authentication API",
+  "description": "NodeJS JWT - A simple example",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cornflourblue/node-jwt-authentication-api.git"
+    "url": "https://github.com/flaviomicheletti/nodejs-jwt-express.git"
   },
   "scripts": {
     "start": "nodemon ./src/server.js"
